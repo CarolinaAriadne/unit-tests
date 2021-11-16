@@ -15,6 +15,13 @@
     estudante.feedback() // Retorna: 'Eita pessoa boa!'
 */
 
-const createStudent = () => {};
+const feedbackChave = () => 'Eita pessoa boa!'; // arrow de uma linha, return implícito e não é preciso chaves
+
+const createStudent = (namePerson) => ({
+
+  name: namePerson,
+  feedback: feedbackChave,
+
+}); // o return está implícito, em createStudent, pois as chaves da arrow funtions está omitida tbm - as chaves existentes se tratam da criação do objeto - em razão de ter o parênteses antes das chaves do objeto, ele entende que é um comando apenas e por isso o return implícito existe; sem o parênteses ele entenderia que seria a chaves  da arrow e por isso daria erro, pq o return precisa ser explícito nos casos que precisam de fato de um return
 
 module.exports = createStudent;
