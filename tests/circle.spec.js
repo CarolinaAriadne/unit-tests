@@ -47,7 +47,7 @@ describe('4 - Implemente os casos de teste para a função `circle`', () => {
   })
 
   it('Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2', () => {
-  expect(Object.values(circle(2))[2]).toEqual(12.56) // selecionado valor do objeto posição [2] referente a função circle, se raio for 2, espera - se o resultado indicado - [2] é posição de circumf (radius posição 0, area posição 1, circumferencia posição 2)
+  expect(Object.values(circle(2))[2]).toBeCloseTo(12.56) // selecionado valor do objeto posição [2] referente a função circle, se raio for 2, espera - se o resultado indicado - [2] é posição de circumf (radius posição 0, area posição 1, circumferencia posição 2)
   });
 
   it('Teste que a função retorna, dentro de um objeto, a area correta para um círculo de raio 3', () => {
@@ -55,7 +55,7 @@ describe('4 - Implemente os casos de teste para a função `circle`', () => {
   });
 
   it('Teste que a função retorna, dentro de um objeto, os dados corretos para um círculo de raio 3', () => {
-  expect(circle(3)).toBeCloseTo({radius: 3, area: 28.26, circumference: 18.84})
+  expect(circle(3)).toEqual({radius: 3, area: 28.26, circumference: 18.84})
   }); 
 })
 
