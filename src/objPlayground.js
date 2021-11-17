@@ -1,3 +1,4 @@
+/* eslint-disable no-sequences */
 /*
   Implemente a função calculator que recebe dois números inteiros como parâmetro e retorna um objeto com as seguintes chaves:
     - sum;
@@ -33,8 +34,42 @@
   arrayGenerator('entries', { sum: 3, mult: 2, div: 1, sub: 0 }) // [ [ 'sum', 3 ], [ 'mult', 2 ], [ 'div', 1 ], [ 'sub', 0 ] ]
 */
 
-const calculator = (number1, number2) => {};
+let numberGlobal1 = 2;
+let numberGlobal2 = 3;
 
-const arrayGenerator = (type, object) => {};
+const calculator = (number1, number2) => ({
+  // return implícito, objeto contendo apenas um comportamento
+  sum: number1 + number2,
+  mult: number1 * number2,
+  div: Math.trunc(number1 / number2), //  math.trunc : me devolve a parte inteiro de um número, desprezando suas casas decimais
+  sub: number1 - number2,
+});
+
+let resultado = calculator(numberGlobal1, numberGlobal2);
+
+let word = 'keys';
+let object2 = resultado;
+
+const arrayGenerator = (type, object) => {
+  let retornoFinal;
+
+  if (type === 'keys') {
+    let retornoKeys = Object.keys(object);
+
+    retornoFinal = retornoKeys;
+  } else if (type === 'values') {
+    let retornoValue = Object.values(object);
+
+    retornoFinal = retornoValue;
+  } else if (type === 'entries') {
+    let retornoEntries = Object.entries(object);
+
+    retornoFinal = retornoEntries;
+  }
+
+  return retornoFinal;
+};
+
+arrayGenerator(word, object2);
 
 module.exports = { calculator, arrayGenerator };
