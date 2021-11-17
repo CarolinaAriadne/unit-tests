@@ -59,7 +59,7 @@ describe("4 - Implemente os casos de teste para a função `circle`", () => {
 });
 
 const validateCircleWithRadius3 = (obj) => {
-  if (obj.area === 28.26 && obj.circumference === 18.84 && obj.radius === 3) {
+  if (obj.area === 28.259999999999998 && obj.circumference === 18.84 && obj.radius === 3) {
     return true;
   } else {
     return false;
