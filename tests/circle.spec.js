@@ -30,7 +30,11 @@ describe('4 - Implemente os casos de teste para a função `circle`', () => {
   });   
 
   it('Testa se circle retorna um objeto', () => {
-    expect({}).toStrictEqual({});
+
+    let retorno = circle(3); // função chamada recebendo 3 como parâmetro, retornando o objeto
+    let tipo = typeof(retorno); // tipo de dado, do que está dentro de retorno - tipo de dado é objeto
+
+    expect(tipo).toEqual('object');
 
   });
 
