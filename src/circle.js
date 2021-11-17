@@ -26,9 +26,12 @@ const circle = (radius) => {
 
   return {
     radius,
-    area: PI * radius * radius,
+    area: parseFloat((PI * radius * radius).toFixed(2)), // acrescentei toFixed - casas decimais são contados a partir da vírvula . toFixed usado para que retorne número com no máximo duas casas decimais após vírgula - toFixed converte número em string com casas decimais especificadas, em razão disso, usamos parseFloat que transforma string em número 
     circumference: 2 * PI * radius,
   };
 };
+
+let resultado = circle(3);
+  console.log(resultado);
 
 module.exports = circle;
