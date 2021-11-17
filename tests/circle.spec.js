@@ -52,15 +52,15 @@ describe("4 - Implemente os casos de teste para a função `circle`", () => {
   });
 
   it("Teste que a função retorna, dentro de um objeto, os dados corretos para um círculo de raio 3", () => {
-    let result = circle(3);
-    let validation = validateCircleWithRadius3(result);
-    expect(validation).toBe(true);
+    let result = circle(3); // chamada da função, que recebe 3 como parâmetro, seu retorno guardado variável result (retorno é o objeto com dados)
+    let validation = validateCircleWithRadius3(result); // validateCicle contém o retorno (objeto), da função circle - contém o retorno do circle
+    expect(validation).toBe(true); // espero que validation (que recebe o objeto nos moldes do if, considerando parâmetro 3), seja verdade 
   });
 });
 
-const validateCircleWithRadius3 = (obj) => {
+const validateCircleWithRadius3 = (obj) => { // validadeCircle recebe como parâmetro obj que se refere ao result (que é o retorno da circle, que é o objeto)
   if (obj.area === 28.259999999999998 && obj.circumference === 18.84 && obj.radius === 3) {
-    return true;
+    return true;  // se obj (que está dentro de result, que se refere ao retorno do circle - retorna objeto), referente a chave área...&& se obj referente a chave circumference...sucessivamente
   } else {
     return false;
   }

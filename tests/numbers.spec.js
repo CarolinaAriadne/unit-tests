@@ -30,9 +30,9 @@ describe('2 - Implemente os casos de teste para a função `numbers`', () => {
    
   it('Verifica se retorna false se a função receber [1, 2, `3`,4,5]', () => {
 
-    let array = [1, 2, '3', 4, 5];
-    let result2 = numbers(array);
-    expect(result2).toBe(false);
+    let array = [1, 2, '3', 4, 5]; 
+    let result2 = numbers(array); // numbers recebe como parâmetro o contido na variável array, o retorno da função é inserido na result2
+    expect(result2).toBe(false); // espera que o return da função, que é o array, seja false considerando que recebeu os valores descritos
       
    })
        
